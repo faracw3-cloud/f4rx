@@ -3,242 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Saytning brauzer tepadagi sarlavhasi -->
-    <title>Tez va Oson — Faqat BMW Avtosaloni</title>
-    <!-- CSS faylini HTML sahifaga ulaymiz (main.css nomi bilan ulanmoqda) -->
-    <link rel="stylesheet" href="main.css">
-    <!-- Google Fonts zamonaviy jiddiy shriftlari -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com" rel="stylesheet">
+    <title>Drop Cream - Red Flower Ice-cream</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-    <!-- YUQORI HEADER PANELI (Saytning eng tepa qismi) -->
-    <header class="main-header">
-        <div class="header-left">
-            <!-- Sayt logotipi va ko'k neon effekti -->
-            <div class="site-logo">Tez va Oson <span>BMW Auto</span></div>
-            <!-- Avtomobillar qidiruv paneli (Poisk) -->
-            <div class="search-container">
-                <span class="search-icon">🔍</span>
-                <input type="text" placeholder="BMW modelini qidirish...">
-            </div>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🍦</span> Drop Cream
         </div>
-        <!-- Aloqa tugmasi -->
-        <button class="contact-btn">Bog'lanish</button>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Know Us</a>
+            <a href="#">Close By</a>
+        </nav>
+        <div class="nav-icons">
+            <span class="search-icon">🔍</span>
+            <span class="menu-icon">☰</span>
+        </div>
     </header>
 
-    <!-- REKLAMA BANNERI (Hero Section) -->
-    <section class="hero-section">
+    <!-- HERO SECTION -->
+    <main class="hero-section">
         <div class="hero-content">
-            <h1>Tez va Oson <span>BMW M-Power</span> Dunyosiga Kiring</h1>
-            <p>Eng so'nggi va afsonaviy 15 xil premium BMW modellari kafolatlangan narxlarda sizni kutmoqda.</p>
+            <h1 class="hero-title">Red Flower<br>Ice-cream</h1>
+            <p class="hero-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Order Now</button>
+                <button class="btn btn-secondary">Book Table</button>
+            </div>
+        </div>
+
+        <!-- REVIEW WIDGET -->
+        <div class="review-widget">
+            <div class="widget-header">
+                <span class="widget-logo">Ⓜ️</span>
+                <div>
+                    <h4>Uzi Nexus</h4>
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                </div>
+            </div>
+            <p>Indulge in frozen bliss with our irresistible ice cream delights!</p>
+        </div>
+    </main>
+
+    <!-- PRODUCTS GRID -->
+    <section class="products-container">
+        <!-- 1 Karta -->
+        <div class="card dark-card">
+            <div class="card-img-wrapper">
+                <img src="https://placeholder.com" alt="Muzqaymoq">
+            </div>
+            <div class="card-info">
+                <h3>Banana Soft Cream</h3>
+                <p class="label">Order Type:</p>
+                <div class="order-types">
+                    <span class="type-btn active">On Table</span>
+                    <span class="type-btn">Delivery</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rs. 250/-</span>
+                    <div class="counter">
+                        <button>-</button>
+                        <span>02</span>
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 Karta (Oq fonli) -->
+        <div class="card light-card">
+            <div class="card-img-wrapper">
+                <img src="https://placeholder.com" alt="Muzqaymoq">
+            </div>
+            <div class="card-info">
+                <h3>Banana Soft Cream</h3>
+                <p class="label">Order Type:</p>
+                <div class="order-types">
+                    <span class="type-btn active">On Table</span>
+                    <span class="type-btn">Delivery</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rs. 250/-</span>
+                    <div class="counter">
+                        <button>-</button>
+                        <span>02</span>
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Karta -->
+        <div class="card dark-card">
+            <div class="card-img-wrapper">
+                <img src="https://placeholder.com" alt="Muzqaymoq">
+            </div>
+            <div class="card-info">
+                <h3>Banana Soft Cream</h3>
+                <p class="label">Order Type:</p>
+                <div class="order-types">
+                    <span class="type-btn active">On Table</span>
+                    <span class="type-btn">Delivery</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rs. 250/-</span>
+                    <div class="counter">
+                        <button>-</button>
+                        <span>02</span>
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 Karta -->
+        <div class="card dark-card">
+            <div class="card-img-wrapper">
+                <img src="https://placeholder.com" alt="Muzqaymoq">
+            </div>
+            <div class="card-info">
+                <h3>Banana Soft Cream</h3>
+                <p class="label">Order Type:</p>
+                <div class="order-types">
+                    <span class="type-btn active">On Table</span>
+                    <span class="type-btn">Delivery</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rs. 250/-</span>
+                    <div class="counter">
+                        <button>-</button>
+                        <span>02</span>
+                        <button>+</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- AVTOMOBILLAR RO'YXATI (JAMI 15 TA BMW MODELI) -->
-    <div class="content-wrapper">
-        <h2 class="block-title">Mavjud Eksklyuziv BMW Modellari</h2>
-        
-        <!-- Kartalarni 4 talik qator qilib joylashtiruvchi tarmoq (Grid) -->
-        <div class="cars-grid">
-            
-            <!-- 1. BMW M5 CS -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-m5">
-                    <div class="car-badge">M-Power</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW M5 CS (F90)</div>
-                    <div class="car-specs">
-                        <span>🚀 3.0s (0-100)</span>
-                        <span>🔥 635 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$142,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. BMW M4 CSL -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-m4">
-                    <div class="car-badge">Coupe</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW M4 CSL</div>
-                    <div class="car-specs">
-                        <span>🚀 3.7s (0-100)</span>
-                        <span>🔥 550 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$139,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. BMW M8 Competition -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-m8">
-                    <div class="car-badge">Gran Coupe</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW M8 Competition</div>
-                    <div class="car-specs">
-                        <span>🚀 3.2s (0-100)</span>
-                        <span>🔥 625 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$156,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. BMW X7 M60i -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-x7">
-                    <div class="car-badge">Premium SUV</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW X7 M60i xDrive</div>
-                    <div class="car-specs">
-                        <span>🚀 4.7s (0-100)</span>
-                        <span>🔥 530 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$110,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 5. BMW i8 Roadster -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-i8">
-                    <div class="car-badge">Hybrid</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW i8 Roadster</div>
-                    <div class="car-specs">
-                        <span>🚀 4.6s (0-100)</span>
-                        <span>🔥 374 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$147,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 6. BMW XM Label Red -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-xm">
-                    <div class="car-badge">Hyper SUV</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW XM Label Red</div>
-                    <div class="car-specs">
-                        <span>🚀 3.8s (0-100)</span>
-                        <span>🔥 748 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$185,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 7. BMW M3 Touring -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-m3t">
-                    <div class="car-badge">M-Power</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW M3 Competition Touring</div>
-                    <div class="car-specs">
-                        <span>🚀 3.6s (0-100)</span>
-                        <span>🔥 510 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$98,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 8. BMW Z4 Roadster -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-z4">
-                    <div class="car-badge">Roadster</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW Z4 M40i</div>
-                    <div class="car-specs">
-                        <span>🚀 4.5s (0-100)</span>
-                        <span>🔥 340 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$65,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 9. BMW M2 Coupe -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-m2">
-                    <div class="car-badge">Compact Sport</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW M2 Coupe (G87)</div>
-                    <div class="car-specs">
-                        <span>🚀 4.1s (0-100)</span>
-                        <span>🔥 460 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$72,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 10. BMW iX M60 -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-ix">
-                    <div class="car-badge">Electric</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW iX M60 Electric</div>
-                    <div class="car-specs">
-                        <span>🚀 3.8s (0-100)</span>
-                        <span>🔥 619 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$108,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 11. BMW i7 M70 -->
-            <div class="car-card">
-                <div class="car-img-box img-bmw-i7">
-                    <div class="car-badge">Luxury Sedan</div>
-                </div>
-                <div class="car-info">
-                    <div class="car-name">BMW i7 M70 xDrive</div>
-                    <div class="car-specs">
-                        <span>🚀 3.7s (0-100)</span>
-                        <span>🔥 660 HP</span>
-                    </div>
-                    <div class="car-footer">
-                        <div class="car-price">$168,000</div>
-                        <button class="buy-btn">Sotib olish</button>
-                    </div>
-                </div>
-            </div>
-
+</body>
+</html>

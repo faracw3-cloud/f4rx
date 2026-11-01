@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bosh sahifa | Position laboratoriyasi</title>
+  <link rel="stylesheet" href="./f.css">
+</head>
+<body>
+  <!-- Dark mode kaliti: CSS :has() shu checkbox holatini kuzatadi -->
+  <input type="checkbox" id="theme-toggle" class="sr-only">
+
+  <header class="top">
+    <nav class="wrap nav" aria-label="Asosiy menyu">
+      <a class="nav-link" href="index.html" aria-current="page">Bosh sahifa</a>
+      <a class="nav-link" href="static.html">static</a>
+      <a class="nav-link" href="relative.html">relative</a>
+      <a class="nav-link" href="absolute.html">absolute</a>
+      <a class="nav-link" href="fixed.html">fixed</a>
+      <a class="nav-link" href="sticky.html">sticky</a>
+      <label for="theme-toggle" class="btn btn--small toggle">
+        <span class="when-light">Qorong'u rejim</span><span class="when-dark">Yorug' rejim</span>
+      </label>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1>CSS position</h1>
+    <p class="lead">Besh xil <code>position</code> qiymati, har biri uchun alohida sahifa. Tepadagi tugma bilan dark mode'ni yoqib ko'ring.</p>
+
+    <h2>Sahifalar</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>static</h3>
+        <p>Standart holat. Oqim bo'yicha.</p>
+        <a class="btn btn--small" href="static.html">Ochish</a>
+      </article>
+      <article class="card">
+        <h3>relative</h3>
+        <p>O'z joyiga nisbatan suriladi.</p>
+        <a class="btn btn--small" href="relative.html">Ochish</a>
+      </article>
+      <article class="card">
+        <h3>absolute</h3>
+        <p>Eng yaqin "ota"ga nisbatan.</p>
+        <a class="btn btn--small" href="absolute.html">Ochish</a>
+      </article>
+      <article class="card">
+        <h3>fixed</h3>
+        <p>Brauzer oynasiga mahkamlanadi.</p>
+        <a class="btn btn--small" href="fixed.html">Ochish</a>
+      </article>
+      <article class="card">
+        <h3>sticky</h3>
+        <p>Aylantirganda yopishib qoladi.</p>
+        <a class="btn btn--small" href="sticky.html">Ochish</a>
+      </article>
+    </div>
+
+    <h2>Qisqacha taqqoslash</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>position</th><th>Oqimda joy egallaydimi</th><th>Nimaga nisbatan</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>static</code></td><td>Ha</td><td>Nisbat yo'q, oddiy oqim</td></tr>
+          <tr><td><code>relative</code></td><td>Ha, eski joyi qoladi</td><td>O'zining oddiy joyiga</td></tr>
+          <tr><td><code>absolute</code></td><td>Yo'q</td><td>Eng yaqin positioned ota-elementga</td></tr>
+          <tr><td><code>fixed</code></td><td>Yo'q</td><td>Brauzer oynasiga</td></tr>
+          <tr><td><code>sticky</code></td><td>Ha</td><td>Aylantiriladigan konteynerga</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Tugmalar: ::before va ::after</h2>
+    <p class="lead">Ustiga olib boring: <code>::before</code> fonni yuguritadi, <code>::after</code> orqadagi ramkani siljitadi.</p>
+    <p>
+      <a class="btn" href="static.html">Outline tugma</a>
+      <a class="btn btn--solid" href="sticky.html">Solid tugma</a>
+      <button class="btn btn--small" type="button">Kichik tugma</button>
+    </p>
+    <pre><code>.btn {
+  position: relative;
+  isolation: isolate;
+}
+.btn::before {            /* hover&#x27;da yuguruvchi fon */
+  content: &quot;&quot;;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.btn::after {             /* orqadagi ramka */
+  content: &quot;&quot;;
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border: 2px solid var(--highlight);
+  transform: translate(5px, 5px);
+}
+.btn:hover::before { transform: scaleX(1); }</code></pre>
+
+    <div class="page-end"></div>
+  </main>
+
+</body>
+</html>

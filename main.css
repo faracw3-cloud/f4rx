@@ -1,281 +1,254 @@
-/* PREMIUM BMW AVTOSALON JIDDIY DARK MODE STILLARI */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Poppins', sans-serif; 
+/* Основные сбросы стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body { 
-    background-color: #0d0e12; /* To'q qora va metall ko'rinishidagi fon */
-    color: #ffffff; /* Barcha asosiy matnlar oq rangda */
-    overflow-x: hidden; /* Sahifa yonga qarab siljib ketmasligi uchun */
+body {
+    background-color: #4a0505;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: linear-gradient(135deg, #5c0606 25%, #2e0202 100%);
+    overflow-x: hidden;
 }
 
-/* NAVIGATION HEADER (Saytning eng tepa qismi) */
-.main-header { 
-    display: flex; 
-    justify-content: space-between; /* Elementlarni chekka-chekkaga tekis suradi */
-    align-items: center; 
-    padding: 18px 6%; 
-    background-color: rgba(17, 19, 24, 0.95); 
-    backdrop-filter: blur(10px); /* Orqa fonni silliq xiralashtirish */
-    position: sticky; /* Sahifa pastga tushganda ham tepada yopishib turadi */
-    top: 0; 
-    z-index: 1000; /* Elementlar headerning tagidan o'tishi uchun */
-    border-bottom: 1px solid #1f232d; /* Pastki qismidagi ingichka ajratuvchi chiziq */
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
 }
 
-.header-left { 
-    display: flex; 
-    align-items: center; 
-    gap: 24px; /* Elementlar orasidagi masofa */
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.site-logo { 
-    font-size: 24px; 
-    font-weight: 800; 
-    color: #ffffff; 
-    letter-spacing: 1px; 
-    text-transform: uppercase; 
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.site-logo span { 
-    color: #00e5ff; /* Neon ko'k yorug'lik effekti */
-    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5); 
+.nav-links a.active, .nav-links a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
 }
 
-/* Avtomobillar qidiruv paneli */
-.search-container { 
-    position: relative; 
-    width: 400px; 
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.search-container input { 
-    width: 100%; 
-    padding: 12px 16px 12px 45px; 
-    border: 1px solid #2c313e; 
-    border-radius: 30px; 
-    background-color: #171a23; 
-    color: #ffffff; 
-    outline: none; 
-    font-size: 14px; 
-    transition: 0.3s; 
+/* HERO SECTION */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    position: relative;
 }
 
-.search-container input:focus { 
-    border-color: #00e5ff; 
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); 
+.hero-content {
+    max-width: 500px;
 }
 
-.search-icon { 
-    position: absolute; 
-    left: 18px; 
-    top: 13px; 
-    color: #64748b; 
+.hero-title {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-/* Bog'lanish tugmasi */
-.contact-btn { 
-    background-color: #00e5ff; 
-    color: #0d0e12; 
-    border: none; 
-    padding: 12px 24px; 
-    border-radius: 30px; 
-    font-weight: 700; 
-    cursor: pointer; 
-    transition: 0.3s; 
+.hero-desc {
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-.contact-btn:hover { 
-    background-color: #00b8d4; 
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); 
-    transform: translateY(-2px); 
+.hero-buttons {
+    display: flex;
+    gap: 15px;
 }
 
-/* HERO BANNER SECTION (Reklama qismida yuqori sifatli BMW foni) */
-.hero-section { 
-    height: 50vh; 
-    background: linear-gradient(180deg, rgba(13, 14, 18, 0.4) 0%, #0d0e12 100%), url('https://unsplash.com') no-repeat center center/cover; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    padding: 0 20px; 
+.btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.hero-content h1 { 
-    font-size: 44px; 
-    font-weight: 800; 
-    margin-bottom: 15px; 
-    letter-spacing: -1px; 
+.btn-primary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
 }
 
-.hero-content h1 span { 
-    color: #00e5ff; 
+.btn-primary:hover {
+    background-color: #ffffff;
+    color: #4a0505;
 }
 
-.hero-content p { 
-    font-size: 18px; 
-    color: #94a3b8; 
-    max-width: 600px; 
-    margin: 0 auto; 
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #dddddd;
 }
 
-/* RO'YXAT DOIRASI VA SETKA SYSTEMASI */
-.content-wrapper { 
-    padding: 40px 6%; 
-    max-width: 1440px; 
-    margin: 0 auto; 
+/* WIDGET */
+.review-widget {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 15px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-.block-title { 
-    font-size: 26px; 
-    font-weight: 700; 
-    margin-bottom: 30px; 
-    position: relative; 
-    padding-left: 15px; 
+.widget-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
 }
 
-.block-title::before { 
-    content: ''; 
-    position: absolute; 
-    left: 0; 
-    top: 6px; 
-    width: 5px; 
-    height: 24px; 
-    background-color: #00e5ff; 
-    border-radius: 4px; 
-    box-shadow: 0 0 10px #00e5ff; 
+.widget-header h4 {
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.cars-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px; 
-    margin-bottom: 50px; 
+.stars {
+    font-size: 10px;
 }
 
-/* AVTO KARTALARI STILI */
-.car-card { 
-    background-color: #171a23; 
-    border: 1px solid #2c313e; 
-    border-radius: 20px; 
-    overflow: hidden; 
-    cursor: pointer; 
-    transition: 0.3s ease; 
+.review-widget p {
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.4;
 }
 
-.car-card:hover { 
-    transform: translateY(-10px); 
-    border-color: #00e5ff; 
-    box-shadow: 0 15px 30px rgba(0, 229, 255, 0.15); 
+/* CARDS GRID */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px;
 }
 
-.car-img-box { 
-    width: 100%; 
-    height: 200px; 
-    background-size: cover; 
-    background-position: center; 
-    position: relative; 
+.card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* 15 TA REALISTIK VA ANIQ ISHLAYDIGAN BMW RASMLARI LINKLARI */
-.img-bmw-m5 { background-image: url('https://unsplash.com'); }
-.img-bmw-m4 { background-image: url('https://unsplash.com'); }
-.img-bmw-m8 { background-image: url('https://unsplash.com'); }
-.img-bmw-x7 { background-image: url('https://unsplash.com'); }
-.img-bmw-i8 { background-image: url('https://unsplash.com'); }
-.img-bmw-xm { background-image: url('https://unsplash.com'); }
-.img-bmw-m3t { background-image: url('https://unsplash.com'); }
-.img-bmw-z4 { background-image: url('https://unsplash.com'); }
-.img-bmw-m2 { background-image: url('https://unsplash.com'); }
-.img-bmw-ix { background-image: url('https://unsplash.com'); }
-.img-bmw-i7 { background-image: url('https://unsplash.com'); }
-.img-bmw-x5m { background-image: url('https://unsplash.com'); }
-.img-bmw-e46 { background-image: url('https://unsplash.com'); }
-.img-bmw-alpina { background-image: url('https://unsplash.com'); }
-.img-bmw-e60 { background-image: url('https://unsplash.com'); }
-
-.car-badge { 
-    position: absolute; 
-    top: 15px; 
-    left: 15px; 
-    background-color: rgba(0, 0, 0, 0.7); 
-    backdrop-filter: blur(5px); 
-    padding: 6px 14px; 
-    border-radius: 20px; 
-    font-size: 12px; 
-    font-weight: 600; 
-    color: #00e5ff; 
-    border: 1px solid rgba(0, 229, 255, 0.3); 
+.dark-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
-.car-info { 
-    padding: 24px; 
+.light-card {
+    background: #ffffff;
+    color: #222222;
 }
 
-.car-name { 
-    font-size: 20px; 
-    font-weight: 700; 
-    margin-bottom: 8px; 
+.card-img-wrapper img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-.car-specs { 
-    display: flex; 
-    gap: 15px; 
-    color: #94a3b8; 
-    font-size: 13px; 
-    margin-bottom: 20px; 
-    border-bottom: 1px solid #2c313e; 
-    padding-bottom: 15px; 
+.card-info {
+    flex-grow: 1;
 }
 
-.car-footer { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+.card-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
-.car-price { 
-    font-size: 22px; 
-    font-weight: 800; 
-    color: #ffffff; 
+.label {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-bottom: 5px;
 }
 
-.buy-btn { 
-    background-color: transparent; 
-    color: #00e5ff; 
-    border: 1px solid #00e5ff; 
-    padding: 10px 20px; 
-    border-radius: 25px; 
-    font-weight: 600; 
-    font-size: 13px; 
-    cursor: pointer; 
-    transition: 0.3s; 
+.order-types {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 12px;
 }
 
-.buy-btn:hover { 
-    background-color: #00e5ff; 
-    color: #0d0e12; 
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); 
+.type-btn {
+    font-size: 10px;
+    padding: 4px 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-/* CHAT DUMALOQ TUGMASI (Ekranning pastki o'ng tomonida turadi) */
-.floating-chat { 
-    position: fixed; 
-    bottom: 30px; 
-    right: 30px; 
-    background-color: #00e5ff; 
-    width: 60px; 
-    height: 60px; 
-    border-radius: 50%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.4); 
-    cursor: pointer; 
-    z-index: 1000; 
-    font-size: 26px; 
-    color: #0d0e12; 
+.dark-card .type-btn {
+    border-color: rgba(255,255,255,0.2);
 }
+
+.dark-card .type-btn.active {
+    background: #a81d1d;
+    border-color: #a81d1d;
+}
+
+.light-card .type-btn.active {
+    background: #4a0505;
+    color: #fff;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,0,0,0.05);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.dark-card .counter {
+    background: rgba(255,255,255,0.1);
+}
+
+.counter button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}
+q
